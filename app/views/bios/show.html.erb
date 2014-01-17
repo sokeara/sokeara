@@ -1,0 +1,17 @@
+<h1 align="center">Friend Biology</h1>
+<div id="fri-bio">
+	<div class="grid_12">
+		<div class="grid_4">
+			<img src=<%= image_path("#{@fri_info.photo}") %> />
+		</div>
+		<div class="grid_8">
+			<h3>Friend ID : <%= @bio_show.friend_id %></h3>
+			<h3>Date Of Birth : <%= @bio_show.date_of_birth %></h3>
+			<h3>Place Of Birth : <%= @bio_show.place_of_birth %></h3>
+			<h3>Skills : <%= @bio_show.skills %></h3>
+			<h3>Favorite : <%= @bio_show.favorite %></h3>
+			<h3>Dream : <%= @bio_show.dream %></h3>
+		</div>
+	</div>
+	<%= link_to "Back", friends_path, class: "back" %>
+</div>

@@ -1,0 +1,22 @@
+<div id="new">
+	<h2>Edit Fiend</h2>
+	<div id="add">
+	<%= form_for(@friend) do |f| %>
+		<p>
+			<%= f.label :first_name %></br>
+			<%= f.text_field :first_name %>
+		</p>
+		<p>
+			<%= f.label :last_name %></br>
+			<%= f.text_field :last_name %>
+		</p>
+		<p>
+			<%= f.label :photo %></br>
+			<%= f.text_field :photo %>
+		</p>
+		<p>
+			<%= f.submit %>
+		</p>
+	<% end %>
+	</div>
+</div>

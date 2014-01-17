@@ -1,0 +1,23 @@
+<h1 align="center">Friends' Photo</h1>
+
+	<!-- @ is a instance variable -->
+	<!-- <% %> put to the block that we do not display -->
+	<!-- <%= %> put to the block that we display -->
+<div id="photo">
+	<div><%= link_to '<button>Add New</button>'.html_safe, new_friend_path %></div></br>
+	<% @fri.each do |fris| %>
+		<div class="grid_4">
+			<!-- <img class="imgs" src= <%= image_path(fris.photo) %> /> display image-->
+
+			<!-- display image and use link -->
+			<%= link_to image_tag(fris.photo), bio_path(fris) %> 
+			<%= link_to "#{fris.first_name}  #{fris.last_name}", bio_path(fris) %>
+			|
+			<%= link_to "<button>Edit</button>".html_safe, edit_friend_path(fris) %>
+			|
+			<%= link_to "<button>Delete</button>".html_safe, friend_path(fris), method: :delete, data:{confirm: "Are you sure want to delete?"} %>
+		</div>
+	<% end %>
+	
+</div>
+<div align="center"><%= link_to '<button>Add New</button>'.html_safe, new_friend_path %></div>

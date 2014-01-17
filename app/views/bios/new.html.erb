@@ -1,0 +1,30 @@
+<div id="new">
+	<h2>Add Biology</h2>
+	<div id="add">
+		<%= form_for(@bio) do |b| %>
+			<p>
+				<%= b.label :date_of_birth %></br>
+				<%= b.text_field :date_of_birth %>
+			</p>
+			<p>
+				<%= b.label :place_of_birth %></br>
+				<%= b.text_field :place_of_birth %>
+			</p>
+			<p>
+				<%= b.label :skills %></br>
+				<%= b.text_field :skills %>
+			</p>
+			<p>
+				<%= b.label :favorite %></br>
+				<%= b.text_field :favorite %>
+			</p>
+			<p>
+				<%= b.label :dream %></br>
+				<%= b.text_field :dream %>
+			</p>
+			<p>
+				<%= b.submit %>
+			</p>
+		<% end %>
+	</div>
+</div>
